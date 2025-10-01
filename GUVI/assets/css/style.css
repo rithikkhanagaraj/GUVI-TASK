@@ -1,0 +1,48 @@
+/*
+ * Custom Styles for Responsive Design
+ * This file works in conjunction with Bootstrap 5
+ */
+
+/* 1. Global Body Styling */
+body {
+    /* Set a neutral background color for the body */
+    background-color: #f8f9fa; 
+    /* Prevent horizontal scrolling issues */
+    overflow-x: hidden;
+}
+
+/* 2. Style for Centered Card Containers */
+/* The HTML uses 'min-height: 100vh' on the container to center vertically */
+
+/* Add media query to slightly adjust the card padding on very small screens (like old phones) */
+@media (max-width: 576px) {
+    /* Reduce padding on the card component on small devices */
+    .card {
+        padding: 1.5rem !important; /* !important to override Bootstrap's p-4 (2rem) */
+    }
+    
+    /* Ensure the container doesn't have excess padding on small screens */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* 3. Style for the Index/Welcome Page */
+/* Adjust the welcome message padding on small screens */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem; /* Make the main title slightly smaller on tablets/phones */
+    }
+
+    .p-5 {
+        padding: 3rem !important; /* Reduce the large padding on the welcome container */
+    }
+}
+
+/* 4. Utility/Extra Styles (Optional) */
+
+/* Custom styling for the message div (used in JS for success/error alerts) */
+#message {
+    font-weight: 500;
+}
